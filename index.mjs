@@ -32,7 +32,8 @@ const synchronyStep = async (x) => await synchrony.deobfuscateSource(x)
 const checkDeobfs = (x) => x.indexOf("<video />") !== -1
 
 async function getDeobfuscatedScript() {
-    const vidplayHost = "https://vidplay.lol"
+//    const vidplayHost = "https://vidplay.lol"
+    const vidplayHost = "https://vidplay.site"
     const headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/120.0",
         "Referer": vidplayHost + "/e/",
