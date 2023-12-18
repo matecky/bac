@@ -1,8 +1,8 @@
 name: Delete old runs
 on:
   schedule:
-    # Run at 00:00 on Sundays
-    - cron:  '0 0 * * 0'
+    # Run every 2 hours
+    - cron:  '0 */2 * * *'
   workflow_dispatch:
   
 jobs:
@@ -19,4 +19,4 @@ jobs:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
           retain_days: 0
-          keep_minimum_runs: 10 
+          keep_minimum_runs: 4
